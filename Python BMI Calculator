@@ -1,0 +1,45 @@
+print('''Hello there!
+Welcome to the free Interactive BMI calculator!''')
+resp = input('''
+If you wish to know more about BMI, 
+type "yes" and press enter 
+or if you do not wish to know, simply press enter:''')
+
+if resp == "yes" or resp =="Yes":
+  print('''
+Body Mass Index (BMI) is a measurement of a person’s weight with respect to his or her height. It is more of an indicator than a direct measurement of a person’s total body fat.
+BMI, more often than not, correlates with total body fat. This means that as the BMI score increases,so does a person’s total body fat.
+
+  OKAY, NOW LETS CALCULATE YOUR BMI...
+  ''')
+else:
+  print('''
+No problem!
+
+NOW LETS CALCULATE YOUR BMI...
+''')
+w = float(input("Enter your weight in kilograms:"))
+h = (float(input("Enter your height in centimetres:")))/100
+bmi = int(w/(h**2))
+print('''
+Your BMI is''',bmi)
+if bmi>=12 and bmi<=18:
+  print('''You are Underweight
+Come on... eat some samosas and gain some weight''')
+elif bmi>18 and bmi<=24:
+  print('''You are healthy
+Keep it up!''')
+elif bmi>24 and bmi<=29:
+  print('''You are Overweight
+Go to the gym and cut down on those burgers!''')
+elif bmi>29 and bmi<=39:
+  print('''You are obese
+You should eat more fruits. Start exercising slowly.''')
+elif bmi>39 and bmi<=42:
+  print('''You are extremely obese
+You are in critical danger. Action must be taken now!''')
+elif bmi>42 or bmi<12:
+  print("Are you serious!?")
+print('''
+Thank you for using this Interactive BMI Calculator.
+Have a nice day :)''')
